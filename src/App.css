@@ -172,6 +172,21 @@
   box-shadow: 14px 14px 31px -8px rgba(0, 0, 0, 0.75);
 }
 
+/* History */
+.history_container {
+    margin-top: 40px;
+}
+
+.history_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.history_paragraph {
+    text-align: justify;
+}
+
 @media only screen and (max-width: 600px) {
   .navBarNormal {
     display: none;
