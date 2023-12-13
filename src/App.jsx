@@ -1,8 +1,27 @@
-import './App.css';
+import "./App.css";
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Bookings from './pages/Bookings';
+import Gallery from './pages/Gallery';
+import OurServices from './pages/OurServices';
+import History from './pages/History';
+import Contact from './pages/Contact';
+import TAndC from './pages/TAndC';
+import Footer from './pages/Footer';
 
-function App() {
+function App(props) {
   return (
-      <div>Reservation User Client</div>
+    <>
+      <Navbar />
+      <Home />
+      {/* <Bookings />
+      <Gallery />
+      <OurServices />
+      <History />
+      <Contact />
+      <Footer />
+      <TAndC /> */}
+    </>
   );
 }
 

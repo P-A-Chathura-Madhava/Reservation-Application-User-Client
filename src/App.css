@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.toggleBar {
+    display: none;
+}
+
+.carousel {
+    width: 90%;
+    background-size: contain;
+}
+
+.home_carausal_container {
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .navBarNormal {
+        display: none;
+    }
+    .navBarNormalItem {
+        display: none;
+    }
+
+    .toggleBar {
+        display: flex;
+        left: -500px;
+        transition: 0.4s ease-in;
+    }
+    .toggleBarList {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        padding: 20px;
+        border-radius: 10px;
+        gap: 10px;
+    }
+    .closeBtn {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        font-size: 1.2rem;
+    }
+    .active {
+        left: 0;
+    }
+  }
