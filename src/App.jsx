@@ -14,11 +14,9 @@ function App(props) {
     <>
       <Navbar />
       <Home />
-      <div style={{height: "600px"}}></div>
-      {/* <Bookings />
       <Gallery />
-      <OurServices />
       <History />
+      {/* <OurServices />
       <Contact />
       <Footer />
       <TAndC /> */}
