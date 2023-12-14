@@ -17,10 +17,10 @@ const TAndC = () => {
   return (
     <div id="tandc" className="container py-5">
       <div className="tc_header_container">
-        <h1>Terms & Conditions</h1>
+        <h1 className="tc_title text-center">Terms & Conditions</h1>
       </div>
-      <div className="tc_subtitle">
-        <h4>
+      <div>
+        <h4 className="tc_subtitle text-center">
           GENERAL TERMS AND CONDITIONS APPLICABLE FOR USE OF THE ONLINE SEAT
           RESERVATION SERVICE OF SRI LANKA RAILWAYS.
         </h4>

@@ -4,13 +4,15 @@ import Autocomplete from "@mui/material/Autocomplete";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
-import "react-datepicker/dist/react-datepicker.css";
 import img1 from "../images/image-01.jpg";
 import img2 from "../images/image-02.jpg";
 import img3 from "../images/image-03.jpg";
 import img4 from "../images/image-04.jpg";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
+
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -89,8 +91,8 @@ const Home = () => {
       </div>
       <div id="bookings" className="bookingCard">
         <div className="booking_card_left">
-          <h2>Book Your Seat</h2>
-          <p>You can book both ways</p>
+          <h2 className="booking_card_title">Book Your Seat</h2>
+          <p className="booking_card_subtitle">You can book both ways</p>
         </div>
         <div className="booking_card_right">
           <div className="booking_card_container">
@@ -111,42 +113,59 @@ const Home = () => {
                 sx={{ width: 300 }}
                 renderInput={(params) => <TextField {...params} label="To" />}
               />
-              <input className="date_picker" type="date" />
+              <div className="booking_datepicker_container">
+                <DatePicker
+                  className="booking_datepicker"
+                  showIcon
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                />
+              </div>
             </div>
             <div className="booking_card_right_middle">
               <div class="form-outline">
-                <input
+                <TextField
+                  id="outlined-number"
+                  label="Number of Passengers"
+                  size="small"
                   type="number"
-                  id="typeNumber"
-                  class="form-control"
-                  placeholder="Number of Passengers"
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
                 />
               </div>
               <FormControlLabel
                 control={<Checkbox onChange={setDatePicker} />}
                 label="Return"
               />
-              {showDatePicker === true ? (
-                <input className={showDatePicker} type="date" />
+              {showDatePicker === false ? (
+                <div className="return_datepicker_container">
+                  <DatePicker
+                    className="return_datepicker"
+                    showIcon
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                  />
+                </div>
               ) : (
                 <div></div>
               )}
             </div>
             <div className="booking_card_right_lower">
-                <div className="booking_card_right_lower_container">
+              <div className="booking_card_right_lower_container">
                 <Button
-                style={{ color: "black", borderColor: "black" }}
-                variant="outlined"
-              >
-                Search
-              </Button>
-              <Button
-                style={{ color: "black", borderColor: "black" }}
-                variant="outlined"
-              >
-                Reset
-              </Button>
-                </div>
+                  style={{ color: "black", borderColor: "black" }}
+                  variant="outlined"
+                >
+                  Search
+                </Button>
+                <Button
+                  style={{ color: "black", borderColor: "black" }}
+                  variant="outlined"
+                >
+                  Reset
+                </Button>
+              </div>
             </div>
           </div>
         </div>

@@ -58,6 +58,7 @@
   top: 300px;
   left: 120px;
   background-color: rgba(80, 73, 73, 0.658);
+  z-index: 1000;
 }
 
 .home_carousal_overlay_text {
@@ -105,16 +106,20 @@
   justify-content: center;
   left: 0;
   height: cover;
-  background: rgb(58, 198, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(58, 198, 255, 1) 21%,
-    rgba(33, 138, 200, 1) 75%
-  );
+  background: rgb(3,142,190);
+  background: linear-gradient(90deg, rgba(3,142,190,1) 15%, rgba(0,73,171,1) 56%);
   width: 30%;
   display: flex;
   flex-direction: column;
   padding-left: 20px;
+}
+
+.booking_card_title {
+  color: white;
+}
+
+.booking_card_subtitle {
+  color: white;
 }
 
 .booking_card_right {
@@ -126,6 +131,14 @@
   display: flex;
   gap: 20px;
   width: 90%;
+}
+
+.booking_datepicker_container {
+  width: 30%;
+}
+
+.return_datepicker_container {
+  width: 35%;
 }
 
 .booking_card_right_middle {
@@ -295,10 +308,19 @@
   width: 200px;
 }
 
+/* terms and conditions */
+.tc_title {
+  font-size: xx-large;
+}
+
+.tc_subtitle {
+  font-size: medium;
+}
+
 /* Footer */
 .footer_container {
   background-color: rgb(63, 62, 62);
-  padding: 20px;
+  padding: 40px 60px 0 60px;
   display: flex;
   flex-direction: column;
 }
