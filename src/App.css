@@ -4,6 +4,28 @@
   box-sizing: border-box;
 }
 
+.navbar_items_div {
+  height: 65px;
+}
+
+.navBarNormal {
+  height: 100%;
+  display: flex;
+}
+
+.navBarNormalItem {
+  background-color: #3498db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.navBarNormalItem:hover {
+  background-color: #34495e;
+  cursor: pointer;
+}
+
 .toggleBar {
   display: none;
 }
