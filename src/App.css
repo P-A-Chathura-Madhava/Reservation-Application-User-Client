@@ -229,6 +229,41 @@
   margin: 0;
 }
 
+/* Contact */
+.contact_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact_upper {
+  display: flex;
+  gap: 20px;
+}
+
+.contact_middle {
+  display: flex;
+  gap: 20px;
+}
+
+.contact_textfield {
+  width: 50%;
+}
+
+.contact_textarea {
+  width: 100%;
+}
+
+.button_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_btn {
+  width: 200px;
+}
+
 @media only screen and (max-width: 600px) {
   .navBarNormal {
     display: none;
