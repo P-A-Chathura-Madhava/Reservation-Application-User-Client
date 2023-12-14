@@ -18,9 +18,9 @@ function App(props) {
       <History />
       <OurServices />
       <Contact />
+      <TAndC />
       <div style={{height: "200px"}}></div>
-      {/* <Footer />
-      <TAndC /> */}
+      {/* <Footer /> */}
     </>
   );
 }
