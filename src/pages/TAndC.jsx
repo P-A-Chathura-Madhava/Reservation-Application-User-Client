@@ -15,7 +15,7 @@ import Paper from "@mui/material/Paper";
 
 const TAndC = () => {
   return (
-    <div className="container">
+    <div id="tandc" className="container py-5">
       <div className="tc_header_container">
         <h1>Terms & Conditions</h1>
       </div>

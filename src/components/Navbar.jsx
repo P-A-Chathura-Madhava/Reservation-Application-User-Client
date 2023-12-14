@@ -36,12 +36,12 @@ const Navbar = () => {
         </Typography>
           <div className='navbar_items_div'>
           <ul className='navBarNormal' style={{display: "flex", listStyle: "none"}}>
-          <li className="navBarNormalItem">Home</li>
-          <li className="navBarNormalItem">Bookings</li>
-          <li className="navBarNormalItem">Gallery</li>
-          <li className="navBarNormalItem">Our Services</li>
-          <li className="navBarNormalItem">Contact Us</li>
-          <li></li>
+          <a href="#home"><li className="navBarNormalItem">Home</li></a>
+          <a href="#bookings"><li className="navBarNormalItem">Bookings</li></a>
+          <a href="#gallery"><li className="navBarNormalItem">Gallery</li></a>
+          <a href="#ourservices"><li className="navBarNormalItem">Our Services</li></a>
+          <a href="#contact"><li className="navBarNormalItem">Contact Us</li></a>
+          <a href="#tandc"><li className="navBarNormalItem">Terms and Conditions</li></a>
         </ul>
           </div>
         <div className={active} style={{position: 'absolute', top: "10px" }}>

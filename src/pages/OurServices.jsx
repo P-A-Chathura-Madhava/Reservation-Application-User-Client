@@ -8,7 +8,7 @@ const OurServices = () => {
   },[])
 
   return (
-    <div className='container'>
+    <div id='ourservices' className='container'>
       <div className="our_services_header_container">
         <h2 className='text-center'>Our Services</h2>
       </div>

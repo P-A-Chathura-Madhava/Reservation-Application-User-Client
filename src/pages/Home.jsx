@@ -39,7 +39,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home_carausal_container">
+    <div id="home" className="home_carausal_container">
       <div
         id="carouselExampleAutoplaying"
         class="carousel slide"
@@ -87,7 +87,7 @@ const Home = () => {
         </h5>
         <button className="home_carousal_overlay_button">Book Your Seat</button>
       </div>
-      <div className="bookingCard">
+      <div id="bookings" className="bookingCard">
         <div className="booking_card_left">
           <h2>Book Your Seat</h2>
           <p>You can book both ways</p>

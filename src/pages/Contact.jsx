@@ -7,7 +7,7 @@ const rows = ["Technical issue", "Payment issue", "Support case"];
 
 const Contact = () => {
   return (
-    <div className="container mt-5">
+    <div id="contact" className="container mt-5">
       <h2 className="text-center">Contact Us</h2>
       <form action="">
       <div className="contact_container">

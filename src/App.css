@@ -13,6 +13,11 @@
   display: flex;
 }
 
+.navBarNormal a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
 .navBarNormalItem {
   background-color: #3498db;
   display: flex;

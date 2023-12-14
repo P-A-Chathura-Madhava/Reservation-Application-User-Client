@@ -14,7 +14,7 @@ const Gallery = () => {
   }, [])
 
   return (
-    <div className='container gallery_container'>
+    <div id='gallery' className='container gallery_container'>
       <div className="header_container">
         <h2>Gallery</h2>
       </div>
