@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.toggle_button {
+  display: none;
+}
+
 .navbar_items_div {
   height: 65px;
 }

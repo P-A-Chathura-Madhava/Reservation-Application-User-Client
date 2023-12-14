@@ -27,12 +27,12 @@ const Navbar = () => {
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ mr: 2 }}
+          sx={{ mr: 4 }}
         >
-          <div onClick={showNav}><MenuIcon /></div>
+          <div className='toggle_button' onClick={showNav}><MenuIcon /></div>
         </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          News
+          CTECH Railways
         </Typography>
           <div className='navbar_items_div'>
           <ul className='navBarNormal' style={{display: "flex", listStyle: "none"}}>
