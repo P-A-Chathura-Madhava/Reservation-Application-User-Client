@@ -34,14 +34,16 @@ const Navbar = () => {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           News
         </Typography>
-        <ul className='navBarNormal' style={{display: "flex", listStyle: "none"}}>
-          <li className="navBarNormalItem" style={{marginRight: "10px"}}>Home</li>
-          <li className="navBarNormalItem" style={{marginRight: "10px"}}>Bookings</li>
-          <li className="navBarNormalItem" style={{marginRight: "10px"}}>Gallery</li>
-          <li className="navBarNormalItem" style={{marginRight: "10px"}}>Our Services</li>
-          <li className="navBarNormalItem" style={{marginRight: "40px"}}>Contact Us</li>
+          <div className='navbar_items_div'>
+          <ul className='navBarNormal' style={{display: "flex", listStyle: "none"}}>
+          <li className="navBarNormalItem">Home</li>
+          <li className="navBarNormalItem">Bookings</li>
+          <li className="navBarNormalItem">Gallery</li>
+          <li className="navBarNormalItem">Our Services</li>
+          <li className="navBarNormalItem">Contact Us</li>
           <li></li>
         </ul>
+          </div>
         <div className={active} style={{position: 'absolute', top: "10px" }}>
         <IoIosCloseCircle className='closeBtn' onClick={removeNav} />
         <ul className='toggleBarList' style={{listStyle: "none"}}>

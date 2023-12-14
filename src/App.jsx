@@ -19,8 +19,7 @@ function App(props) {
       <OurServices />
       <Contact />
       <TAndC />
-      <div style={{height: "200px"}}></div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

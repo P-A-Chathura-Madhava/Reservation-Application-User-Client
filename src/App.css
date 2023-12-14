@@ -264,6 +264,143 @@
   width: 200px;
 }
 
+/* Footer */
+.footer_container {
+  background-color: rgb(63, 62, 62);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.upper {
+  display: flex;
+}
+
+.lower {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lower ul {
+  display: flex;
+  gap: 100px;
+}
+
+.lower ul li {
+  color: white;
+  font-weight: 600;
+}
+
+.upper_left {
+  width: 60%;
+}
+
+.upper_left p {
+  color: white;
+}
+
+.upper_left ul li {
+  color: white;
+}
+
+.upper_right {
+  width: 40%;
+}
+
+.footer_container ul {
+  margin: 0;
+  padding: 0;
+}
+
+.upper_right_upper {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+}
+
+.upper_right_lower {
+  height: 60px;
+  width: 100%;
+}
+
+.div_one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.div_one i {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.div_two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.div_three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.div_four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.upper_right_lower {
+  width: 100%;
+  display: flex;
+}
+
+.appstore_div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google_play_div {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slt_logo {
+  width: 70%;
+}
+
+.national_emblem {
+  width: 25%;
+}
+
+.railway_logo {
+  width: 32%;
+}
+
+.appstore_logo {
+  width: 50%;
+}
+
+.google_play_logo {
+  width: 60%;
+}
+
 @media only screen and (max-width: 600px) {
   .navBarNormal {
     display: none;
