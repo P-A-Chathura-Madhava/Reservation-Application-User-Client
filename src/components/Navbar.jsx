@@ -7,8 +7,11 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { IoIosCloseCircle } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  
+  const navigate = useNavigate();
 
   const [active, setActive] = useState("toggleBar");
   const showNav = () => {
@@ -16,6 +19,18 @@ const Navbar = () => {
   }
   const removeNav = () => {
     setActive("toggleBar")
+  }
+
+  const handleLogin = () => {
+    navigate("/login");
+  }
+
+  const handleSignUp = () => {
+    navigate("/signup");
+  }
+
+  const handleHome = () => {
+    navigate("/");
   }
 
   return (
@@ -31,7 +46,7 @@ const Navbar = () => {
         >
           <div className='toggle_button' onClick={showNav}><MenuIcon /></div>
         </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography className='ctech_logo' variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={handleHome}>
           CTECH Railways
         </Typography>
           <div className='navbar_items_div'>
@@ -55,8 +70,8 @@ const Navbar = () => {
         </ul>
 
         </div>
-        <Button color="inherit">Login</Button>
-        <Button color="inherit">Sign Up</Button>
+        <Button color="inherit" onClick={handleLogin}>Login</Button>
+        <Button color="inherit" onClick={handleSignUp}>Sign Up</Button>
       </Toolbar>
     </AppBar>
   </Box>

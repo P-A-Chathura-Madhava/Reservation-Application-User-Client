@@ -1,28 +1,24 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Bookings from "./pages/Bookings";
-import Gallery from "./pages/Gallery";
-import OurServices from "./pages/OurServices";
-import History from "./pages/History";
-import Contact from "./pages/Contact";
-import TAndC from "./pages/TAndC";
-import Footer from "./pages/Footer";
 import Headroom from "react-headroom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MainLayout from "./pages/MainLayout";
+import CustomerLogin from "./pages/CustomerLogin";
+import CustomerSignUp from "./pages/CustomerSignUp";
 
 function App(props) {
   return (
     <>
-      <Headroom>
-        <Navbar />
-      </Headroom>
-      <Home />
-      <Gallery />
-      <History />
-      <OurServices />
-      <Contact />
-      <TAndC />
-      <Footer />
+      <BrowserRouter>
+        <Headroom>
+          <Navbar />
+        </Headroom>
+        <Routes>
+          <Route path="/" element={<MainLayout />} />
+          <Route path="/login" element={<CustomerLogin />} />
+          <Route path="/signup" element={<CustomerSignUp />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

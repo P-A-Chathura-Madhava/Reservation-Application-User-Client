@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.ctech_logo:hover {
+  cursor: pointer;
+}
+
 .toggle_button {
   display: none;
 }
