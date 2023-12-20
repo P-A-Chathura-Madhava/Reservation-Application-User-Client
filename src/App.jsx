@@ -6,6 +6,8 @@ import MainLayout from "./pages/MainLayout";
 import UserLogin from "./pages/UserLogin";
 import UserSignUp from "./pages/UserSignUp";
 import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
+import Checkout from "./pages/Checkout";
 
 function App(props) {
   return (
@@ -19,6 +21,8 @@ function App(props) {
           <Route path="/login" element={<UserLogin />} />
           <Route path="/signup" element={<UserSignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </>

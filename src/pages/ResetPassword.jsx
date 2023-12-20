@@ -16,11 +16,15 @@ const ResetPassword = () => {
   return (
     <div className="container">
     <h1 className="py-4">Reset Password</h1>
-    <p>We will send an email to reset your password</p>
     <form onSubmit={handleSubmit} className="login_form">
       <input
         type="text"
-        placeholder="email"
+        placeholder="Password"
+        onChange={(e) => setEmail(e.target.value)}
+      />
+            <input
+        type="text"
+        placeholder="Confirm Password"
         onChange={(e) => setEmail(e.target.value)}
       />
       <button type="submit">Submit</button>
