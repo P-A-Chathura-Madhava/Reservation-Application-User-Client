@@ -3,8 +3,9 @@ import Navbar from "./components/Navbar";
 import Headroom from "react-headroom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./pages/MainLayout";
-import CustomerLogin from "./pages/CustomerLogin";
-import CustomerSignUp from "./pages/CustomerSignUp";
+import UserLogin from "./pages/UserLogin";
+import UserSignUp from "./pages/UserSignUp";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App(props) {
   return (
@@ -15,8 +16,9 @@ function App(props) {
         </Headroom>
         <Routes>
           <Route path="/" element={<MainLayout />} />
-          <Route path="/login" element={<CustomerLogin />} />
-          <Route path="/signup" element={<CustomerSignUp />} />
+          <Route path="/login" element={<UserLogin />} />
+          <Route path="/signup" element={<UserSignUp />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
       </BrowserRouter>
     </>

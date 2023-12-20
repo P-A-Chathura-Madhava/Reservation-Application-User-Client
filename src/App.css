@@ -458,6 +458,16 @@
   width: 60%;
 }
 
+/* Login Form */
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Login Form Ends */
+
 @media only screen and (max-width: 600px) {
   .navBarNormal {
     display: none;
