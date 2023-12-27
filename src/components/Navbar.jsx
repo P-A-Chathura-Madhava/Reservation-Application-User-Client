@@ -28,6 +28,11 @@ const Navbar = () => {
     navigate("/");
   };
 
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -97,7 +102,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          {authState?.user === null ? (
+          {authState === null ? (
             <div>
               <Button component={Link} to="/login" color="inherit">
                 Login
@@ -107,7 +112,10 @@ const Navbar = () => {
               </Button>
             </div>
           ) : (
-            <div>Welcome {authState?.name}</div>
+            <div>
+              <span className="mx-4">Welcome {authState?.name}</span>
+              <button type="button" className="btn btn-danger" onClick={handleLogout}>Logout</button>
+            </div>
           )}
         </Toolbar>
       </AppBar>
