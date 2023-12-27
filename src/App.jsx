@@ -26,8 +26,9 @@ function App(props) {
           <Route path="/reset-password/:token" element={<ResetPasswordToken />} />
           {/* <Route path="/reset-password" element={<ResetPassword />} /> */}
           {/* for protecting the route */}
-          {/* <Route path="/checkout" element={<PrivateRoutes><Checkout /></PrivateRoutes>} /> */}
-          <Route path="/checkout" element={<Checkout />} />
+          {/* <Route path="/checkout" element={<Checkout />} /> */}
+          <Route path="/checkout" element={<PrivateRoutes><Checkout /></PrivateRoutes>} />
+          {/* <Route path="/checkout" element={<Checkout />} /> */}
         </Routes>
       </BrowserRouter>
     </>
