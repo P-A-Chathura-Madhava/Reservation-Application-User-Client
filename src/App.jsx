@@ -9,6 +9,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Checkout from "./pages/Checkout";
 import { PrivateRoutes } from "./routing/PrivateRoutes";
+import ResetPasswordToken from "./pages/ResetPasswordToken";
 
 function App(props) {
   return (
@@ -21,7 +22,8 @@ function App(props) {
           <Route path="/" element={<MainLayout />} />
           <Route path="/login" element={<UserLogin />} />
           <Route path="/signup" element={<UserSignUp />} />
-          {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPasswordToken />} />
           {/* <Route path="/reset-password" element={<ResetPassword />} /> */}
           {/* for protecting the route */}
           {/* <Route path="/checkout" element={<PrivateRoutes><Checkout /></PrivateRoutes>} /> */}
