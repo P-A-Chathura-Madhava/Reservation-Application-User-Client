@@ -15,7 +15,7 @@ const MainLayout = () => {
       <History />
       <OurServices />
       <Contact />
-      <TAndC />
+      {/* <TAndC /> */}
       <Footer />
     </>
   );
