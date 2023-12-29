@@ -504,22 +504,51 @@
   .navBarNormalItem {
     display: none;
   }
+  .toggle_button {
+    display: block;
+  }
 
   .toggleBar {
+    /* background-color: ; */
     display: flex;
-    left: -500px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    left: -600px;
     transition: 0.4s ease-in;
   }
   .toggleBarList {
+    background-color: #1976d2;
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    background-color: black;
-    padding: 20px;
-    border-radius: 10px;
-    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+.toggleBarlItem {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.togglebar_link {
+  width: 100%;
+  height: auto;
+  text-decoration: none;
+  color: white;
+}
+.toggleBarlItem:hover {
+    background-color: #34495e;
+    cursor: pointer;
   }
   .closeBtn {
     position: absolute;
+    cursor: pointer;
     top: 6px;
     right: 6px;
     font-size: 1.2rem;

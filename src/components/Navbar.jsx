@@ -44,7 +44,7 @@ const Navbar = () => {
             aria-label="menu"
             sx={{ mr: 4 }}
           >
-            <div className="toggle_button" /*  onClick={showNav} */>
+            <div className="toggle_button"  onClick={showNav}>
               <MenuIcon />
             </div>
           </IconButton>
@@ -85,21 +85,31 @@ const Navbar = () => {
           <div className={active} style={{ position: "absolute", top: "10px" }}>
             <IoIosCloseCircle className="closeBtn" onClick={removeNav} />
             <ul className="toggleBarList" style={{ listStyle: "none" }}>
-              <li className="toggleBarlItem" style={{ marginRight: "10px" }}>
+              <a className="togglebar_link" href="#home">
+              <li className="toggleBarlItem" /* style={{ marginRight: "10px" }} */>
                 Home
               </li>
-              <li className="toggleBarlItem" style={{ marginRight: "10px" }}>
+              </a>
+              <a className="togglebar_link" href="#bookings">
+              <li className="toggleBarlItem" /* style={{ marginRight: "10px" }} */>
                 Bookings
               </li>
-              <li className="toggleBarlItem" style={{ marginRight: "10px" }}>
+              </a>
+              <a className="togglebar_link" href="#gallery">
+              <li className="toggleBarlItem" /* style={{ marginRight: "10px" }} */>
                 Gallery
               </li>
-              <li className="toggleBarlItem" style={{ marginRight: "10px" }}>
+              </a>
+              <a className="togglebar_link" href="#ourservices">
+              <li className="toggleBarlItem" /* style={{ marginRight: "10px" }} */>
                 Our Services
               </li>
-              <li className="toggleBarlItem" style={{ marginRight: "40px" }}>
+              </a>
+              <a className="togglebar_link" href="#contact">
+              <li className="toggleBarlItem" /* style={{ marginRight: "40px" }} */>
                 Contact Us
               </li>
+              </a>
             </ul>
           </div>
           {authState === null ? (
