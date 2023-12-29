@@ -7,7 +7,7 @@
     <img src="https://traintimetable.lk/wp-content/uploads/2023/04/Train-Timetable-Reservation.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">CTECH Railway Reservation Application Website frontend API</h3>
+<h3 align="center">CTECH Railway Reservation Application Admin frontend API</h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -36,6 +36,8 @@
 ## About The Project
 
 In this projects a user can visit the websites, registers and login to the website. They can check all the trains available for reservations. Once the  user can select a tour and proceed to checkout and click the credit card payment details to proceed. Once the payment is success the orders will be placed and users will be able to get the email of ticket information. In this part only focus on backend APIs of admins and users.
+
+The admin also plays an important role for this project as the admin is the one responsible for adding trains, seat classes and updating, removing them. The admin can see all the trains, reservations.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
