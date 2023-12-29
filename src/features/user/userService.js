@@ -51,11 +51,58 @@ const register = async (userData) => {
     }
   };
 
+  const reserveATrain = async (reservationData) => {
+    // console.log("reserving a train function");
+    // console.log(reservationData);
+    // console.log(data);
+    // const ticketInfo = {
+    //   firstName: reservationData.firstName,
+    //   lastName: reservationData.lastName,
+    //   address: reservationData.address,
+    //   city: reservationData.city,
+    //   state: reservationData.state,
+    //   pincode: reservationData.pincode,
+    // }
+    // const reservedTrain = {
+    //   train: "65869bfd6451f84fe20bdb75",
+    //   trainClass: "657fe5c1504bfc2c8702479c",
+    //   seat: reservationData.passengers,
+    // }
+    // const createdReservationData = {
+    //   ticketInfo: ticketInfo,
+    //   reservedTrain: reservedTrain
+    // }
+    // console.log(createdReservationData);
+    // console.log(reservationData);
+    // console.log("Working");
+    const newData = {
+      ticketInfo: {
+        firstName: 'Chathura',
+        lastName: 'Madhava',
+        address: 'Bandaragama',
+        city: 'Kalutara',
+        state: 'Western Province',
+        pincode: 12530
+      },
+      reservedTrain: {
+        train: '657e9a10fe6b64ca9582ee24',
+        trainClass: '657fe5c1504bfc2c8702479c',
+        seat: 4
+      }
+    }
+    // console.log(newData);
+    const response = await axios.post(`${base_url}user/reserve-a-train`, newData, config);
+    if (response.data) {
+      return response.data;
+    }
+  };
+
 const authService = {
     register,
     login,
     forgotPassToken,
-    resetPass
+    resetPass,
+    reserveATrain
 }
 
 export default authService;

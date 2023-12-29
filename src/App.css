@@ -12,6 +12,8 @@
   display: none;
 }
 
+/* Navbar */
+
 .navbar_items_div {
   height: 65px;
 }
@@ -42,6 +44,8 @@
 .toggleBar {
   display: none;
 }
+
+/* Navbar ends */
 
 .carousel {
   width: 90%;
@@ -90,7 +94,7 @@
   position: absolute;
   bottom: -200px;
   background-color: white;
-  height: auto;
+  height: 250px;
   width: 1000px;
   display: flex;
   justify-content: center;
@@ -139,16 +143,21 @@
 
 .booking_datepicker_container {
   width: 30%;
+  z-index: 1000;
 }
 
 .return_datepicker_container {
   width: 35%;
+  z-index: 1000;
+  position: absolute;
+  right: -90px;
 }
 
 .booking_card_right_middle {
   display: flex;
-  gap: 20px;
-  width: 90%;
+  /* gap: 20px; */
+  width: 100%;
+  height: 100px;
 }
 
 .date_picker {
@@ -470,7 +479,23 @@
   color: red;
 }
 
+.datepicker {
+  height: 40px;
+  width: 200px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding-left: 20px;
+  font-size: large;
+}
+
 /* Login Form Ends */
+
+/* Checkout Form */
+.checkout_header {
+  color: gray;
+  text-transform: uppercase;
+}
+/* Checkout Form Ends */
 
 @media only screen and (max-width: 600px) {
   .navBarNormal {

@@ -54,6 +54,17 @@ export const resetPassword = createAsyncThunk(
   }
 );
 
+export const reserveTrain = createAsyncThunk(
+  "auth/reserveTrain",
+  async (data, thunkAPI) => {
+    try {
+      return await authService.reserveATrain(data);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
 const getCustomerFromLocalStorage = localStorage.getItem("customer")
   ? JSON.parse(localStorage.getItem("customer"))
   : null;
@@ -138,6 +149,28 @@ export const authSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.isSuccess = false;
+        state.message = action.error;
+        if (state.isSuccess === false) {
+          console.log("Something Went Wrong!");
+        }
+      })
+      .addCase(reserveTrain.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(reserveTrain.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError= false;
+        state.isSuccess = true;
+        state.createdReservation = action.payload;
+        if (state.isSuccess) {
+          console.log("Train Reserved Successfully");
+        }
+      })
+      .addCase(reserveTrain.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.isSuccess = false;
+        state.user = null;
         state.message = action.error;
         if (state.isSuccess === false) {
           console.log("Something Went Wrong!");
