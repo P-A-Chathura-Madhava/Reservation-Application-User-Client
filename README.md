@@ -75,6 +75,6 @@ In this projects a user can visit the websites, registers and login to the websi
 
 Chathura Madhava - [@https://www.linkedin.com/in/chathura-madhava-126465191/](https://www.linkedin.com/in/chathura-madhava-126465191/)
 
-Project Link: [https://github.com/P-A-Chathura-Madhava/Reservation-Application-User-Client.git](https://github.com/P-A-Chathura-Madhava/Reservation-Application-User-Client.git)
+Project Link: [https://github.com/P-A-Chathura-Madhava/Reservation-Application-Admin-Client.git](https://github.com/P-A-Chathura-Madhava/Reservation-Application-Admin-Client.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
