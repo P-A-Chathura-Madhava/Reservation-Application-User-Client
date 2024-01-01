@@ -40,7 +40,7 @@ const UserSignUp = () => {
     // console.log(values.password);
     dispatch(registerUser(values));
     setTimeout(()=>{
-      alert("Admin Created Successfully");
+      // alert("Admin Created Successfully");
       navigate("/login");
     }, 1000)
     },
