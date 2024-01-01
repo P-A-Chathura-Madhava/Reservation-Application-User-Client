@@ -470,6 +470,7 @@
 /* Login Form */
 
 .login_form {
+  width: 40%;
   display: flex;
   flex-direction: column;
   gap: 20px;

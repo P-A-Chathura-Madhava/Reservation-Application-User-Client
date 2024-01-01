@@ -5,6 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { registerUser } from "../features/user/userSlice";
 import { useNavigate } from "react-router-dom";
 
+import TextField from "@mui/material/TextField";
+import Button from '@mui/material/Button';
+
 const signUpSchema = yup.object({
   name: yup.string().required("Name is required"),
   email: yup
@@ -37,8 +40,9 @@ const UserSignUp = () => {
     // console.log(values.password);
     dispatch(registerUser(values));
     setTimeout(()=>{
-      alert("User Created Successfully");
-    }, 2000)
+      alert("Admin Created Successfully");
+      navigate("/login");
+    }, 1000)
     },
   });
 
@@ -54,20 +58,26 @@ const UserSignUp = () => {
   const [password, setPassowrd] = useState("");
 
   return (
-    <div className="container">
+    <div className="container d-flex flex-column align-items-center justify-content-center mt-4">
       <h1 className="py-4">Sign Up</h1>
       <form className="login_form" onSubmit={formik.handleSubmit}>
-        <input
-          type="text"
-          placeholder="name"
+      <TextField
+          label="Name"
+          fullWidth
+          size="small"
+          name="name"
+          variant="outlined"
           value={formik.values.name}
           onChange={formik.handleChange("name")}
           onBlur={formik.handleBlur("name")}
         />
         <div className="error">{formik.touched.name && formik.errors.name}</div>
-        <input
-          type="text"
-          placeholder="email"
+        <TextField
+          label="Email"
+          fullWidth
+          size="small"
+          name="email"
+          variant="outlined"
           value={formik.values.email}
           onChange={formik.handleChange("email")}
           onBlur={formik.handleBlur("email")}
@@ -75,9 +85,12 @@ const UserSignUp = () => {
         <div className="error">
           {formik.touched.email && formik.errors.email}
         </div>
-        <input
-          type="text"
-          placeholder="mobile"
+        <TextField
+          label="Mobile"
+          fullWidth
+          size="small"
+          name="mobile"
+          variant="outlined"
           value={formik.values.mobile}
           onChange={formik.handleChange("mobile")}
           onBlur={formik.handleBlur("mobile")}
@@ -85,9 +98,13 @@ const UserSignUp = () => {
         <div className="error">
           {formik.touched.mobile && formik.errors.mobile}
         </div>
-        <input
+        <TextField
+          fullWidth
+          size="small"
+          name="password"
+          label="Password"
           type="password"
-          placeholder="password"
+          autoComplete="current-password"
           value={formik.values.password}
           onChange={formik.handleChange("password")}
           onBlur={formik.handleBlur("password")}
@@ -95,7 +112,7 @@ const UserSignUp = () => {
         <div className="error">
           {formik.touched.password && formik.errors.password}
         </div>
-        <button type="submit">Sign Up</button>
+        <Button type="submit" variant="contained">Sign Up</Button>
       </form>
     </div>
   );

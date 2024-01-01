@@ -44,7 +44,7 @@ const Navbar = () => {
             aria-label="menu"
             sx={{ mr: 4 }}
           >
-            <div className="toggle_button"  onClick={showNav}>
+            <div className="toggle_button"  /* onClick={showNav} */>
               <MenuIcon />
             </div>
           </IconButton>
