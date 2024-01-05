@@ -44,9 +44,9 @@ function App(props) {
           <Route
             path="/checkout"
             element={
-              <PrivateRoutes>
+              // <PrivateRoutes>
                 <Checkout />
-              </PrivateRoutes>
+              //</PrivateRoutes>
             }
           />
           {/* <Route path="/checkout" element={<Checkout />} /> */}

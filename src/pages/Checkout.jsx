@@ -28,8 +28,8 @@ const checkoutSchema = yup.object({
 });
 
 const Checkout = () => {
-  const booking = useSelector((state) => state.bookingSlice);
-  console.log(booking);
+  // const booking = useSelector((state) => state.bookingSlice);
+  // console.log(booking);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -51,9 +51,9 @@ const Checkout = () => {
       // console.log(values);
       // console.log(values.password);
       dispatch(reserveTrain(values));
-      setTimeout(() => {
-        navigate("/");
-      }, 1000);
+      // setTimeout(() => {
+      //   navigate("/");
+      // }, 1000);
     },
   });
 

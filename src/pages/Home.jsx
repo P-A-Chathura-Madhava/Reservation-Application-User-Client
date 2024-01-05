@@ -55,6 +55,7 @@ const Home = () => {
     },
     validationSchema: bookingSchema,
     onSubmit: (values) => {
+      console.log(values);
       dispatch(assignValues(values));
       navigate("/checkout");
     },

@@ -15,8 +15,8 @@ export const config = {
 };
 
 const register = async (userData) => {
-    // console.log(userData);
-    const response = await axios.post(`${base_url}user/register`, userData);
+    console.log(userData);
+    const response = await axios.post(`${base_url}customer/`, userData);
     if (response.data) {
         localStorage.setItem("customer", JSON.stringify(response.data));
       return response.data;
@@ -24,6 +24,7 @@ const register = async (userData) => {
   };
 
   const login = async (userData) => {
+    // console.log(userData);
     const response = await axios.post(`${base_url}customer/login`, userData);
     if (response.data) {
       localStorage.setItem("customer", JSON.stringify(response.data));
@@ -52,29 +53,19 @@ const register = async (userData) => {
   };
 
   const reserveATrain = async (reservationData) => {
-    // console.log("reserving a train function");
-    // console.log(reservationData);
-    // console.log(data);
-    // const ticketInfo = {
-    //   firstName: reservationData.firstName,
-    //   lastName: reservationData.lastName,
-    //   address: reservationData.address,
-    //   city: reservationData.city,
-    //   state: reservationData.state,
-    //   pincode: reservationData.pincode,
-    // }
-    // const reservedTrain = {
-    //   train: "65869bfd6451f84fe20bdb75",
-    //   trainClass: "657fe5c1504bfc2c8702479c",
-    //   seat: reservationData.passengers,
-    // }
-    // const createdReservationData = {
-    //   ticketInfo: ticketInfo,
-    //   reservedTrain: reservedTrain
-    // }
-    // console.log(createdReservationData);
-    // console.log(reservationData);
-    // console.log("Working");
+    const ticketInfo = {
+      firstName: reservationData.firstName,
+      lastName: reservationData.lastName,
+      address: reservationData.address,
+      city: reservationData.city,
+      state: reservationData.state,
+      pincode: reservationData.pincode,
+    }
+    const reservedTrain = {
+      train: "658e6298a946bcef3bf55dd6",
+      trainClass: "657fe5c1504bfc2c8702479c",
+      seat: reservationData.passengers,
+    }
     const newData = {
       ticketInfo: {
         firstName: 'Chathura',
@@ -90,8 +81,7 @@ const register = async (userData) => {
         seat: 4
       }
     }
-    // console.log(newData);
-    const response = await axios.post(`${base_url}user/reserve-a-train`, newData, config);
+    const response = await axios.post(`${base_url}customer/reserve-a-train`, newData, config);
     if (response.data) {
       return response.data;
     }

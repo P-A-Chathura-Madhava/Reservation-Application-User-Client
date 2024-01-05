@@ -174,7 +174,8 @@ export const authSlice = createSlice({
         state.isSuccess = true;
         state.createdReservation = action.payload;
         if (state.isSuccess) {
-          console.log("Train Reserved Successfully");
+          // console.log("Train Reserved Successfully");
+          toast.success("Train reserved successfully");
         }
       })
       .addCase(reserveTrain.rejected, (state, action) => {
@@ -184,7 +185,8 @@ export const authSlice = createSlice({
         state.user = null;
         state.message = action.error;
         if (state.isSuccess === false) {
-          console.log("Something Went Wrong!");
+          // console.log("Something Went Wrong!");
+          toast.error("Try to reserve later");
         }
       });
   },
