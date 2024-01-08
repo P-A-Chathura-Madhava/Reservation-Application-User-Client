@@ -116,7 +116,7 @@ const Home = () => {
         </h5>
         <a href="#bookings"><button className="home_carousal_overlay_button">Book Your Seat</button></a>
       </div>
-      <div id="bookings" className="bookingCard">
+      {/* <div id="bookings" className="bookingCard">
         <div className="booking_card_left">
           <h2 className="booking_card_title">Book Your Seat</h2>
           <p className="booking_card_subtitle">You can book both ways</p>
@@ -246,7 +246,7 @@ const Home = () => {
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -11,6 +11,8 @@ import InputLabel from "@mui/material/InputLabel";
 import Button from "@mui/material/Button";
 import { reserveTrain } from "../features/user/userSlice";
 import { useNavigate } from "react-router-dom";
+import { getAllSeatClasses } from "../features/seatClass/seatClassSlice";
+import { getAllTrains } from "../features/train/trainSlice";
 
 const checkoutSchema = yup.object({
   firstname: yup.string().required("Firstname is required"),
@@ -31,6 +33,11 @@ const Checkout = () => {
   // const booking = useSelector((state) => state.bookingSlice);
   // console.log(booking);
 
+  const seatClassState = useSelector(state => state.seats.seatClasses);
+  const trainState = useSelector(state => state.trains.trains);
+  const bookingState = useSelector(state => state.bookingSlice.passengers);
+  // console.log(bookingState);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -44,7 +51,7 @@ const Checkout = () => {
       pincode: "",
       trainName: "",
       seatClass: "",
-      passengers: "",
+      passengers: bookingState,
     },
     validationSchema: checkoutSchema,
     onSubmit: (values) => {
@@ -56,6 +63,11 @@ const Checkout = () => {
       }, 1000);
     },
   });
+
+  useEffect(()=>{
+    dispatch(getAllSeatClasses());
+    dispatch(getAllTrains());
+  }, [])
 
   return (
     <div className="container">
@@ -199,9 +211,14 @@ const Checkout = () => {
               onChange={formik.handleChange("trainName")}
               onBlur={formik.handleBlur("trainName")}
             >
-              <MenuItem value={"ColomboExpress"}>Colombo Express</MenuItem>
+                        {trainState.map(({name, _id}, index) => (
+            <MenuItem key={index} value={_id}>
+              {name}
+            </MenuItem>
+          ))}
+              {/* <MenuItem value={"ColomboExpress"}>Colombo Express</MenuItem>
               <MenuItem value={"KandyExpress"}>Kandy Express</MenuItem>
-              <MenuItem value={"PanaduraExpress"}>Panadura Express</MenuItem>
+              <MenuItem value={"PanaduraExpress"}>Panadura Express</MenuItem> */}
             </Select>
           </FormControl>
           <div className="error ms-2 my-1">
@@ -226,9 +243,14 @@ const Checkout = () => {
               onChange={formik.handleChange("seatClass")}
               onBlur={formik.handleBlur("seatClass")}
             >
-              <MenuItem value={"Class A"}>Class A</MenuItem>
-              <MenuItem value={"Class B"}>Class B</MenuItem>
-              <MenuItem value={"Class E"}>Class E</MenuItem>
+          {seatClassState.map(({type, _id}, index) => (
+            <MenuItem key={index} value={_id}>
+              {type}
+            </MenuItem>
+          ))}
+              {/* <MenuItem value={"Class A"}>Class A</MenuItem> */}
+              {/* <MenuItem value={"Class B"}>Class B</MenuItem>
+              <MenuItem value={"Class E"}>Class E</MenuItem> */}
             </Select>
           </FormControl>
           <div className="error ms-2 my-1">
