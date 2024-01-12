@@ -65,8 +65,25 @@ In this projects a user can visit the websites, registers and login to the websi
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 #### Some Screenshots of the project:
-- Home Page
-![image]()
+<!-- - Home Page -->
+![image](/projectImages/1.png)
+
+- Book a Seat
+![image](/projectImages/2.png)
+![image](/projectImages/3.png)
+![image](/projectImages/4.png)
+![image](/projectImages/5.png)
+![image](/projectImages/6.png)
+![image](/projectImages/7.png)
+
+- Signup
+![image](/projectImages/8.png)
+
+- Login
+![image](/projectImages/9.png)
+
+- Checkout
+![image](/projectImages/10.png)
 
 
 <!-- CONTACT -->
