@@ -15,7 +15,7 @@ export const config = {
 };
 
 const register = async (userData) => {
-    console.log(userData);
+    // console.log(userData);
     const response = await axios.post(`${base_url}customer/`, userData);
     if (response.data) {
         localStorage.setItem("customer", JSON.stringify(response.data));
@@ -53,35 +53,8 @@ const register = async (userData) => {
   };
 
   const reserveATrain = async (reservationData) => {
-    const ticketInfo = {
-      firstName: reservationData.firstName,
-      lastName: reservationData.lastName,
-      address: reservationData.address,
-      city: reservationData.city,
-      state: reservationData.state,
-      pincode: reservationData.pincode,
-    }
-    const reservedTrain = {
-      train: "658e6298a946bcef3bf55dd6",
-      trainClass: "657fe5c1504bfc2c8702479c",
-      seat: reservationData.passengers,
-    }
-    const newData = {
-      ticketInfo: {
-        firstName: 'Chathura',
-        lastName: 'Madhava',
-        address: 'Bandaragama',
-        city: 'Kalutara',
-        state: 'Western Province',
-        pincode: 12530
-      },
-      reservedTrain: {
-        train: '657e9a10fe6b64ca9582ee24',
-        trainClass: '657fe5c1504bfc2c8702479c',
-        seat: 4
-      }
-    }
-    const response = await axios.post(`${base_url}customer/reserve-a-train`, newData, config);
+    reservationData.user = getTokenFromLocalStorage._id;
+    const response = axios.post(`${base_url}customer/reserve-a-train`, reservationData, config);
     if (response.data) {
       return response.data;
     }

@@ -14,6 +14,7 @@ import { OpenRoutes } from "./routing/OpenRoutes";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PaymentSuccessfull from "./pages/PaymentSuccessful";
 
 function App(props) {
   return (
@@ -46,6 +47,14 @@ function App(props) {
             element={
               // <PrivateRoutes>
                 <Checkout />
+              //</PrivateRoutes>
+            }
+          />
+                    <Route
+            path="/payment-successfull"
+            element={
+              // <PrivateRoutes>
+                <PaymentSuccessfull />
               //</PrivateRoutes>
             }
           />

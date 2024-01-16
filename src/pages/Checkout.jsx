@@ -59,8 +59,9 @@ const Checkout = () => {
       // console.log(values.password);
       dispatch(reserveTrain(values));
       setTimeout(() => {
-        navigate("/");
-      }, 1000);
+        // formik.resetForm();
+        navigate("/payment-successfull");
+      }, 2000);
     },
   });
 
